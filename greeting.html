@@ -1,42 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+	<html lang= "en">
 
-	<head>
+		<head>
 
-		<title>My First React Application</title>
+			<title>My First React Application</title>
 		
-	</head>
+		</head>
 
 	<body>
-
-		<div id = "app"></div>
+		
+		<div id = "app">
+			<!-- declaring a container for our UI. Components must return a single root element --> 
+		</div>
 
 		<script src = "https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js">
+			// render React into a DOM
 		</script>
 
 	    <script src = "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js">
+	    	// render React into a DOM
 	    </script>
 
      	<script src = "https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js">
+     		// enable JSX and ES6
      	</script>
 
-     	<script type = "text/babel">
+     	 <script type="text/babel">
 
-     		class Greeting extends React.Component{
-     			render(){
-                         return(
-     				 <div>
-     				      <h1>Hello World!</h1>
-     				 </div>
+      		class Greeting extends React.Component {
+        		render() {
+          			return (
+            			<div>
+               				<h1>Hello {this.props.name}!</h1>
+            			</div>
           			);
-          		}
-          	}
+        		}
+      		}
 
-     	ReactDOM.render(
-     		<Greeting />, document.getElementById('app')
-     	);
-     	</script>
+      		ReactDOM.render(
+        		 <Greeting name="Raul"/>, document.getElementById('app')
+      		);
 
+		</script>
 	</body>
-
 </html>
